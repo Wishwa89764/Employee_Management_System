@@ -5,4 +5,4 @@ spring:
     password: Aloka#89764
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create

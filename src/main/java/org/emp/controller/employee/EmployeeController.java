@@ -12,17 +12,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/add-employeeController")
+@RequestMapping("/emp-controller")
+@CrossOrigin
 @RequiredArgsConstructor
 public class EmployeeController {
     final EmployeeService service;
 
-    @PostMapping("add-employee")
+    @PostMapping("/add-employee")
     public void addEmployee(@RequestBody Employee employee){
         service.addEmployee(employee);
     }
 
-    @GetMapping("get-all")
+    @GetMapping("/get-all")
     public List<Employee> getAll(){
         return service.getAll();
     }
